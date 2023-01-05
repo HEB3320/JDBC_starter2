@@ -25,7 +25,7 @@ public class RoleBasedAccessControlTest extends TestBase {
                 .log().all()
                 .accept(ContentType.JSON).
                 when()
-                .get("/spartans/117").
+                .get("/spartans/11").
                 then()
                 .log().all()
                 .statusCode(401);
@@ -52,7 +52,7 @@ public class RoleBasedAccessControlTest extends TestBase {
                 .log().all()
                 .accept(ContentType.JSON).
                 when()
-                .get("/spartans/117").
+                .get("/spartans/11").
                 then()
                 .log().all()
                 .statusCode(200);

@@ -17,7 +17,7 @@ public class SpartanRest_Weekend {
 
     @BeforeClass
     public static void setUp() {
-        RestAssured.baseURI = "http://3.89.115.0";
+        RestAssured.baseURI = "http://3.85.221.255";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
         // above will generate a BASE REQUEST URL OF http://52.23.254.102:8000/api
@@ -30,10 +30,10 @@ public class SpartanRest_Weekend {
         Response response =
                 // RequestSpecification
                 given()
-                        .accept(ContentType.JSON).
-                        when()
+//                        .accept(ContentType.JSON).
+//                        .when()
                         // Actual request is being sent using HTTP verbs methods with URL
-                        .get("/spartans");
+                        .get("/spartans").prettyPeek();
         // eventually it will return a Response object
 
     }
@@ -107,7 +107,7 @@ public class SpartanRest_Weekend {
 
         // jsonPath for content return a json array
         // in order to get single json object we would use  content[indexnumber]
-        // in order to get single field in that json obeject : content[indexnumber].fieldName
+        // in order to get single field in that json object : content[indexnumber].fieldName
         // for example content[1].phone --> second items phone number
         // if we want to store entire phone as a List
         // we can use getList methods with jsonPath by taking out index

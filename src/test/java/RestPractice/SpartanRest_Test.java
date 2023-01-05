@@ -14,7 +14,7 @@ public class SpartanRest_Test {
 
     @BeforeClass
     public static void setUp() {
-        RestAssured.baseURI = "http://3.89.115.0";
+        RestAssured.baseURI = "http://3.87.141.2";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
         // above will generate a BASE REQUEST URL OF http://52.23.254.102:8000/api
@@ -64,6 +64,7 @@ public class SpartanRest_Test {
         assertEquals(200, response.statusCode());
         assertEquals("application/json;charset=UTF-8", response.contentType());
         assertTrue(response.asString().contains("Nels"));
+
 
     }
 

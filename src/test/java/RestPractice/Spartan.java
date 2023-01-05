@@ -12,7 +12,7 @@ public class Spartan {
     private String gender;
     private long phone;
 
-    public Spartan() {
+   public Spartan() {
 
     }
 
